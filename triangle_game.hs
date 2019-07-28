@@ -59,6 +59,9 @@ solveCenter = solve w [] initialBoard
   where
     w b = b M.! (2, 1) && piecesLeft b == 1
 
+solveAny :: Maybe [Move]
+solveAny = solve (\b -> piecesLeft b == 1) [] initialBoard
+
 
 
 
